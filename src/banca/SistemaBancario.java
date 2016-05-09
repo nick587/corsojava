@@ -1,23 +1,23 @@
 package banca;
 
+import implementazione.BancaImpl;
+import implementazione.BancomatImpl;
+import implementazione.CCImpl;
+import implementazione.ClienteImpl;
+import implementazione.IntestatarioImpl;
+import implementazione.SportelloImpl;
+import interfacce.Banca;
+import interfacce.Bancomat;
+import interfacce.CC;
+import interfacce.CartaCredito;
+import interfacce.Cliente;
+import interfacce.Intestatario;
+import interfacce.Sportello;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JOptionPane;
-
-import corso.manpowerformazione.id148911.BancaImpl;
-import corso.manpowerformazione.id148911.BancomatImpl;
-import corso.manpowerformazione.id148911.CCImpl;
-import corso.manpowerformazione.id148911.ClienteImpl;
-import corso.manpowerformazione.id148911.IntestatarioImpl;
-import corso.manpowerformazione.id148911.SportelloImpl;
-import corso.manpowerformazione.id148911.interfacce.Banca;
-import corso.manpowerformazione.id148911.interfacce.Bancomat;
-import corso.manpowerformazione.id148911.interfacce.CC;
-import corso.manpowerformazione.id148911.interfacce.CartaCredito;
-import corso.manpowerformazione.id148911.interfacce.Cliente;
-import corso.manpowerformazione.id148911.interfacce.Intestatario;
-import corso.manpowerformazione.id148911.interfacce.Sportello;
 
 public class SistemaBancario {
 
