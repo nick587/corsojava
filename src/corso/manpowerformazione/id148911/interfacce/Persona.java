@@ -1,0 +1,5 @@
+package corso.manpowerformazione.id148911.interfacce;
+
+public interface Persona {
+
+}

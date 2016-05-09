@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>10</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>
+Banca
+--
+- nome: String
+-cliente[]:Persona
+- sportello:Sportello
+--
+addCliente()
+addCc()
+delCliente
+delCc()
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>0</y>
+      <w>210</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Cc
+--
+-iban:String
+-saldo:double
+-cliente:Cliente
+-fido:double
+-carte[]:Carte
+-movimenti[]:Movimenti
+-banca:Banca
+-stato:String
+--
+aggSaldo()
+addCarta()
+addMovimento()
+checkDisponibilita()
+aggiornamentoFido()
+revocaFdo()
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>280</y>
+      <w>210</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Carta
+--
+-pin: String
+-cc:Cc
+-intestatario:String
+-scadenza:String
+-commissione:double
+-maxGI:double
+-maxGO:double
+-maxMI:double
+-maxMO:double
+-sportello:Sportello
+--
+cambiaStato()
+collegaSportello()
+scollegaSportello()
+checkPin()
+checkTetti()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>280</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Sportello
+--
+id:Banca
+disponibilita:int
+tessere:Carta
+--
+insCarta(Carta c)
+espCata()
+checkpin(String i)
+scegliop()
+preleva(int i)
+versa(int i)
+visSaldoEMovimenti()
+bloccaCarta()
+collegaCarta()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>600</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Bancomat</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>600</y>
+      <w>110</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>CartaDiCredito
+--
+fido[]:Double
+cc[]:Cc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>480</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Persone
+--
+nome:String
+cognome:String
+cf:String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>610</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Cliente
+--
+cc[]:Cc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>610</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Intestatario
+--
+carta[]:Carta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>670</y>
+      <w>110</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>GestioneSB
+--
+file xml
+--
+mail()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>550</y>
+      <w>90</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>50</x>
+      <y>550</y>
+      <w>100</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>550</y>
+      <w>90</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>550</y>
+      <w>100</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+</diagram>
